@@ -1,4 +1,4 @@
-#my_content_admin:
+#myContentAdmin:
 #  class: sfDoctrineRouteCollection
 #  options:
 #    model:                myContent
@@ -8,7 +8,7 @@
 #    with_wildcard_routes: true
 
 
-#my_content:
+#myContent:
 #  url: /page/:url
 #  class: sfDoctrineRoute
 #  options: { model: myContent, type: object, method_for_query: getByDomain }

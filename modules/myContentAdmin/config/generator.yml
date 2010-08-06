@@ -7,7 +7,7 @@ generator:
     with_show:             false
     singular:              ~
     plural:                ~
-    route_prefix:          my_content_admin
+    route_prefix:          myContentAdmin
     with_doctrine_route:   true
     actions_base_class:    sfActions
 
@@ -24,6 +24,7 @@ generator:
       list:
         title:             Статичный контент <a href="#" onclick="jQuery('#sf_admin_bar').slideToggle('slow')">(поиск)</a>
         display:           [id, domain, title, block, url, created_at, updated_at]
+        table_method:       withI18n
         object_actions:
           _edit: ~
           _delete:
