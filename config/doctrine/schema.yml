@@ -1,0 +1,14 @@
+# Статический контент
+# --------------------------------------------
+myContent:
+  tableName:        my_content
+  actAs:
+    Timestampable: ~
+    I18n:
+      fields:       [title, content]
+  columns:
+    domain:         { type: string(255), notnull: true }
+    block:          { type: string(255) }
+    url:            { type: string(255) }
+    title:          { type: string(255) }
+    content:        { type: string, notnull: true }

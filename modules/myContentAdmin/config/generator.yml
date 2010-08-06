@@ -1,0 +1,36 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           myContent
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          my_content_admin
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        domain:            { label: Домен }
+        block:             { label: Блок, help: "Название блока, уникальное в пределах выбранного домена. Оставьте пустым, если это отдельная страница" }
+        url:               { label: URL, help: "Адрес страницы: /page/название_страницы" }
+        title:             { label: Заголовок }
+        content:           { label: Контент }
+        created_at:        { label: Создано }
+        updated_at:        { label: Обновлено }
+      list:
+        title:             Статичный контент <a href="#" onclick="jQuery('#sf_admin_bar').slideToggle('slow')">(поиск)</a>
+        display:           [id, domain, title, block, url, created_at, updated_at]
+        object_actions:
+          _edit: ~
+          _delete:
+            credentials: Superadmin
+      filter:  ~
+      form:    ~
+      edit:
+        title:             Редактирование контента
+      new:
+        title:             Добавление контента

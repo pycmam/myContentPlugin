@@ -1,0 +1,13 @@
+#dev:
+#  .settings:
+#    domains:
+#      - *
+#      - crimea.dev
+#      - eastbooking.dev
+#
+#all:
+#    domains:
+#      - *
+#      - eastbooking.ru
+#      - eastbooking.com
+#      - eastbooking.com.ua

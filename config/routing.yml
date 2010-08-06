@@ -1,0 +1,17 @@
+#my_content_admin:
+#  class: sfDoctrineRouteCollection
+#  options:
+#    model:                myContent
+#    module:               myContentAdmin
+#    prefix_path:          /myContentAdmin
+#    column:               id
+#    with_wildcard_routes: true
+
+
+#my_content:
+#  url: /page/:url
+#  class: sfDoctrineRoute
+#  options: { model: myContent, type: object, method_for_query: getByDomain }
+#  params: { module: myContent, action: show }
+#  requirements:
+#    sf_method: get
