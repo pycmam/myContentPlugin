@@ -17,6 +17,7 @@ abstract class PluginmyContentTranslationForm extends BasemyContentTranslationFo
         $this->widgetSchema['content'] = new sfWidgetFormTextareaTinyMCE(array(
             'width'  => sfConfig::get('app_tinymce_width', 800),
             'height' => sfConfig::get('app_tinymce_height', 500),
+            'config' => 'plugins: "imagemanager"',
         ));
 
         $this->useFields(array('title', 'content'));
