@@ -14,6 +14,15 @@ function include_block($block)
 }
 
 /**
+ * Вставить блок с названием текушего url
+ */
+function include_url_block()
+{
+    $url = sfContext::getInstance()->getRequest()->getPathInfo();
+    echo get_block($url);
+}
+
+/**
  * Получить блок
  *
  * @param string $block
