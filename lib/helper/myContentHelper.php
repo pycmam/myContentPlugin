@@ -16,11 +16,28 @@ function include_block($block)
 /**
  * Вставить блок с названием текушего url
  */
-function include_url_block()
+function include_url_block($name = null)
+{
+    echo get_url_block($name);
+}
+
+/**
+ * Получить блок по текущему URL
+ *
+ * @param string $name
+ * @return string
+ */
+function get_url_block($name = null)
 {
     $url = sfContext::getInstance()->getRequest()->getPathInfo();
-    echo get_block($url);
+
+    if ($name) {
+        $url = sprintf('%s:%s', $name, $url);
+    }
+
+    return get_block($url);
 }
+
 
 /**
  * Получить блок
